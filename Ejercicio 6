@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+float inte(float z){
+    
+    float inte = z;
+    
+    return inte - 1000 > 0;
+    
+}
+
+int main (){
+    
+    float z;
+    
+    printf("¿Cuál es el salario?: \n");
+    scanf("%f", &z );
+    
+    if (inte(z)){
+        
+        float pagod = z + (z*12*0.01);
+        printf("El salario con aumento es de: %f\n", pagod);
+    } else{
+        
+        float pago = z + (z*15*0.01);
+    
+    printf("El salario con aumento es dd: %f\n", pago);
+    
+    }
+    
+    
+    return 0;
+}
