@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+float suma(float x, float y){
+    
+    float suma = x + y;
+    
+    return suma; 
+}
+
+float resta(float x, float y){
+    
+    float resta = x - y;
+    
+    return resta;
+    
+}
+
+float producto(float x, float y){
+    
+    float producto = x * y;
+    
+    return producto;
+    
+}
+
+int main(){
+    
+    float x, y;
+    printf("Introduzca el valor de su primer número" );
+    scanf("%f", &x);
+    printf("Introduzca el valor del segundo nnumero" );
+    scanf("%f", &y);
+    
+    float resultadosuma = suma(x,y);
+    float resultadoresta = resta(x,y);
+    float resultadoproducto = producto(x,y);
+    
+    printf("La suma es: %f\n", resultadosuma);
+    printf("La resta es: %f\n", resultadoresta);
+    printf("El producto es: %f\n", resultadoproducto);
+    
+    return 0;
+}
