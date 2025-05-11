@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+float area(float radio){
+    
+    float area = 3.1416 * radio * radio;
+    
+    return area;
+    
+}
+
+float circun( float radio){
+    
+    float circun = 3.1416 * radio * 2;
+    
+    return circun;
+    
+}
+
+int main (){
+    
+    float radio;
+    
+    printf("Introduzca el valor del radio: \n");
+    scanf("%f", &radio );
+    
+    float rarea = area(radio);
+    float rcircun = circun(radio);
+    
+    printf("El area del círculo es: %f\n", rarea);
+    printf("La circunferencia es: %f\n", rcircun);
+    
+    return 0;
+}
