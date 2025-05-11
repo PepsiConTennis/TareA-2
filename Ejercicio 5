@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+float inte(float z){
+    
+    float inte = z;
+    
+    return inte - 2500 > 0;
+    
+}
+
+int main (){
+    
+    float z;
+    
+    printf("¿Cuánto se va a comprar?: \n");
+    scanf("%f", &z );
+    
+    if (inte(z)){
+        
+        float montod = z - (z*8*0.01);
+        printf("El precio es de: %f\n", montod);
+    } else{
+        
+        float monto = z;
+    
+    printf("El precio es de: %f\n", monto);
+    
+    }
+    
+    
+    return 0;
+}
