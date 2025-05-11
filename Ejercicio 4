@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+float inte(float z, float b){
+    
+    float inte = z + (z*b*0.01);
+    
+    return inte;
+    
+}
+
+int main (){
+    
+    float z, b;
+    
+    printf("¿Qué cantidad se ingresó?: \n");
+    scanf("%f", &z );
+    printf("A un interes del (escribir solo numero): \n");
+    scanf("%f", &b);
+    
+    float monto = inte(z, b);
+    
+    printf("El monto total es: %f\n", monto);
+    
+    return 0;
+}
