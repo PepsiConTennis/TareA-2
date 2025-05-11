@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+float inte(float z, float r){
+    
+    float inte = (z/r);
+    return (inte - (int)inte == 0);
+    
+}
+
+int main (){
+    
+    float z, r;
+    
+    printf("Ingrese un valor: \n");
+    scanf("%f", &z );
+    printf("¿Entre que numero lo quiere dividir?: \n");
+    scanf("%f", &r );
+    
+    if (inte(z,r)){
+        
+        printf("Si es un divisor. \n");
+    } else{
+    
+    printf("No es un divisor. \n");
+    
+    }
+    
+    return 0;
+}
