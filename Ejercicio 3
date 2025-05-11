@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+float peso(float z){
+    
+    float peso = z * 11.96;
+    
+    return peso;
+    
+}
+
+int main (){
+    
+    float z;
+    
+    printf("¿Cuántos dolares se desean convertir?: \n");
+    scanf("%f", &z );
+    
+    float rpeso = peso(z);
+    
+    printf("La cantidad en pesos es: %f\n", rpeso);
+    
+    return 0;
+}
