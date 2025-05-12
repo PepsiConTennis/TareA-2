@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void serie(int x)
+{
+    
+    int pa[100], irl[100];
+    int n, h, i;
+    
+    printf("Escriba un numero: \n");
+    scanf("%d", &x);
+    
+    for (i = 0; i <= 100; i++)
+    {
+        
+        if (x%2 == 0){
+            pa[n++] = x;
+        }
+        
+        else {
+            irl[h++] = x;
+        }
+        
+    }
+    
+    printf("Numeros pares: \n");
+    for(i = 0; i < n; i++)
+    {
+        printf("%d", pa[i]);
+    
+    }
+    
+    printf("\n");
+    
+    printf("Numeros impares: \n");
+    for(i = 0; i < h; i++)
+    {
+        printf("%d", irl[i]);
+    }
+}
+
+int main()
+{
+    int x;
+    
+    serie(x);
+    
+    return 0;   
+    
+}
