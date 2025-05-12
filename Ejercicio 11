@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void serie()
+{
+
+    int i;
+    int x=1;
+    int pares = 0;
+    int impares = 0;
+    int res;
+    
+    for (i=10; i<=50; i++)
+    {
+        res = x*i;
+        
+        if (res%2==0)
+        {
+            pares += res;
+            printf("Par: %d\n", res);
+        }
+        else 
+        {
+            impares += res;
+            printf("Impar: %d\n", res);
+        }
+    }
+    
+    printf("La suma de los impares es: %d\n", impares);
+    printf("La suma de los pares es de: %d\n", pares);
+}
+
+int main()
+{
+    serie();
+    return 0;
+}
