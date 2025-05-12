@@ -1,50 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void serie(int x)
+void serie()
 {
+
+    int i;
+    int x;
+    int pares=0;
+    int impares=0;
+    int nulo=0;
     
-    int pa[100], irl[100];
-    int n, h, i;
-    
-    printf("Escriba un numero: \n");
-    scanf("%d", &x);
-    
-    for (i = 0; i <= 100; i++)
+    for (i=0; i<=100; i++)
     {
+        printf("Introduzca un numero: \n");
+        scanf("%d", &x);
         
-        if (x%2 == 0){
-            pa[n++] = x;
+        if (x == 0)
+        {
+            nulo = nulo + 1;
+            printf("Par: %d\n", pares);
+            printf("Impar: %d\n", impares);
+            printf("Nulos: %d\n", nulo);
         }
-        
-        else {
-            irl[h++] = x;
+        else 
+        {
+            if(x%2 == 0)
+            {
+                pares = pares + 1;
+                printf("Par: %d\n", pares);
+                printf("Impar: %d\n", impares);
+                printf("Nulo: %d\n", nulo);
+
+                
+            }
+            else
+            {
+                impares = impares + 1;
+                printf("Par: %d\n", pares);
+                printf("Impar: %d\n", impares);
+                printf("Nulos: %d\n", nulo);
+            }
         }
-        
     }
     
-    printf("Numeros pares: \n");
-    for(i = 0; i < n; i++)
-    {
-        printf("%d", pa[i]);
-    
-    }
-    
-    printf("\n");
-    
-    printf("Numeros impares: \n");
-    for(i = 0; i < h; i++)
-    {
-        printf("%d", irl[i]);
-    }
+    printf("La cantidad de impares es de: %d\n", impares);
+    printf("La cantidad de pares es de: %d\n", pares);
+    printf("La cantidad de Nulos es de: %d\n", nulo);
 }
 
 int main()
 {
-    int x;
-    
-    serie(x);
-    
-    return 0;   
-    
+    serie();
+    return 0;
 }
