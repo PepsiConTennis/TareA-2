@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+void lista(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("Ingrese el número %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+}
+
+int sumar(int arr[], int n)
+{
+    int plus = 0;
+    for (int i = 0; i < n; i++)
+    {
+        plus += arr[i];
+    }
+    return plus;
+}
+
+int main()
+{
+    int n;
+
+    printf("¿Cuántos números desea ingresar?: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    lista(arr, n);
+    int res = sumar(arr, n);
+
+    printf("La suma es: %d\n", res);
+
+    return 0;
+}
