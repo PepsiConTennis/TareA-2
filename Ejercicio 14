@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+void lista(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("¿Cuantos numeros? %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+}
+
+int count(int arr[], int n, int v)
+{
+    int c = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == v)
+        {
+            c++;
+        }
+    }
+    return c;
+}
+
+int rep(int arr[], int n)
+{
+    int mrep = 0;
+    int most = arr[0];
+    
+    for (int i = 0; i < n; i++)
+    {
+        int plus = count(arr, n, arr[i]);
+       
+        if (plus > mrep)
+        {
+            mrep = plus;
+            most = arr[i];
+        }
+    }
+    return most;
+}
+
+int main()
+{
+    int n;
+    printf("¿Cuantos numeros?: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    lista(arr, n);
+    
+    int y = rep(arr, n);
+    int plus = count(arr, n, y);  
+    
+    printf("El numero que más se repite es: %d.\n", y);
+
+    return 0;
+}
