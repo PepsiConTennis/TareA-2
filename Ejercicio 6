@@ -1,21 +1,12 @@
 #include <stdio.h>
 
-float inte(float z){
-    
-    float inte = z;
-    
-    return inte - 1000 > 0;
-    
-}
-
-int main (){
-    
-    float z;
+float serie(float z){
     
     printf("¿Cuál es el salario?: \n");
     scanf("%f", &z );
     
-    if (inte(z)){
+    if(z > 1000)
+    {
         
         float pagod = z + (z*12*0.01);
         printf("El salario con aumento es de: %f\n", pagod);
@@ -27,6 +18,14 @@ int main (){
     
     }
     
+    return 0;
+    
+}
+
+int main (){
+    
+    float z;
+    serie(z);
     
     return 0;
 }
