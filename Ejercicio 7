@@ -1,21 +1,14 @@
 #include <stdio.h>
 
-float inte(float z, float r){
-    
-    return (z > 800 && r > 7);
-    
-}
-
-int main (){
-    
-    float z, r;
-    
+float inte(float z, float r)
+{
     printf("¿Cuánto durará el viaje?: \n");
     scanf("%f", &r );
     printf("¿Cuántos kilometros se van a recorrer?: \n");
     scanf("%f", &z);
     
-    if (inte(z,r)){
+    if (z > 800 && r > 8)
+    {
         
         float montod = z*0.23 - ((z*0.23)*0.3);
         printf("El precio del boleto es de: %f\n", montod);
@@ -28,4 +21,12 @@ int main (){
     }
     
     return 0;
+    
+}
+
+int main (){
+    
+    float z, r;
+    inte(z,r);
+    
 }
