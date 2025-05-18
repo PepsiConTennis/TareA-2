@@ -4,7 +4,7 @@ void lista(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
     {
-        printf("¿Cuantos numeros? %d: ", i + 1);
+        printf("Ingrese el numero %d: ", i + 1);
         scanf("%d", &arr[i]);
     }
 }
@@ -43,7 +43,7 @@ int rep(int arr[], int n)
 int main()
 {
     int n;
-    printf("¿Cuantos numeros?: ");
+    printf("¿Cuántos numeros?: ");
     scanf("%d", &n);
     
     int arr[n];
